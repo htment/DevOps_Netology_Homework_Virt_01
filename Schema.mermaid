@@ -1,0 +1,13 @@
+flowchart TD
+    Msql[Высоконагруженная БД MySQL, критичная к отказу]
+    bare-metal[Физические сервера bare-metal]
+    Web-приложения[Web-приложения]
+    Docker[Виртуализация уровня ОС контейнеры, Docker]
+    Windows-системы[Windows-системы для бухгалтерии]
+    VMware[Паравиртуализация VMware vSphere, Microsoft Hyper-V, KVM]
+    GPU[Высокопроизводительные расчеты на GPU]
+    GPU-passthrough[Физические серверы или паравиртуализация с GPU-passthrough.]
+Msql-->bare-metal
+Web-приложения-->Docker
+Windows-системы-->VMware
+GPU-->GPU-passthrough
